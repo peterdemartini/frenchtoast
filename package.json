@@ -1,0 +1,30 @@
+{
+  "name": "startled-js",
+  "version": "1.0.0",
+  "description": "An Awesome starter app for Node",
+  "main": "server.js",
+  "scripts": {
+    "start": "PORT=5000 node server.js",
+    "test": "echo \"TODO, no test yet\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/peterdemartini/startled-js.git"
+  },
+  "keywords": [
+    "Starter",
+    "Bootstraped",
+    "App"
+  ],
+  "author": "Peter DeMartini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peterdemartini/startled-js/issues"
+  },
+  "homepage": "https://github.com/peterdemartini/startled-js",
+  "dependencies": {
+    "hapi": "~7.5.0",
+    "lodash": "~2.4.1",
+    "mongojs": "~0.17.0"
+  }
+}
