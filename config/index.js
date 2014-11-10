@@ -4,7 +4,7 @@ var _  = require('lodash'),
 // Config
 var config = {
 	app : {
-		name : 'Startler App',
+		name : 'FrenchToast',
 		description : 'Do Awesome Things'
 	},
 	rootDir : __dirname + '/..',
