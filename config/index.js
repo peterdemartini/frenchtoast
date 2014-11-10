@@ -7,7 +7,8 @@ var config = {
 		name : 'Startler App',
 		description : 'Do Awesome Things'
 	},
-	rootDir : __dirname + '/..'
+	rootDir : __dirname + '/..',
+	sessionHash : 'ILIKECH33S3BURGERS'
 };
 
 // Get Environment Config

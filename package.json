@@ -25,6 +25,9 @@
   "dependencies": {
     "hapi": "~7.5.0",
     "lodash": "~2.4.1",
-    "mongojs": "~0.17.0"
+    "mongojs": "~0.17.0",
+    "good-console": "~2.0.0",
+    "good": "~4.0.0",
+    "yar": "~2.4.0"
   }
 }

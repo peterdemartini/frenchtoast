@@ -1,10 +1,9 @@
-module.exports = function(server){
-	server.route({
-	    method: 'GET',
-	    path: '/hello',
-	    handler: function (request, reply) {
-
-	        reply('hello world');
-	    }
-	});
+module.exports = function(server, config) {
+  server.route({
+    method: 'GET',
+    path: '/',
+    handler: function(request, reply) {
+      reply('Welcome to ' + config.app.name);
+    }
+  });
 };
