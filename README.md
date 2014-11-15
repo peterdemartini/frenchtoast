@@ -1,7 +1,7 @@
 FrenchToast.js
 ==============
 
-A semi-lightweight boilerplate built on Node.js using Hapi.js, Mongo.js, and Ampersand.js.
+A semi-lightweight boilerplate built on Node.js using Hapi.js, Mongo.js, and Angular.js.
 
 This is mainly a personal project for personal projects, to understand the best way build applications.
 
@@ -23,3 +23,10 @@ This is mainly a personal project for personal projects, to understand the best 
 	- yar
 * Mongo.js
 * Lodash
+
+# Getting Started
+
+1. `git clone ...`
+2. `cd frenchtoast`
+3. `npm install`
+4. `gulp`

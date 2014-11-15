@@ -1,3 +1,5 @@
+'use strict';
+
 var config   = require('./config'),
 		requirer = require('./lib/requirer'),
 		Hapi     = require('hapi');
@@ -7,17 +9,17 @@ var server = new Hapi.Server(config.host, config.port);
 
 // Require Hapi.js Config
 requirer
-	.getDirectoryFiles(config.rootDir + '/config/hapi', function(file){
+	.getDirectoryFiles(__dirname + '/config/hapi', function(file){
 		require(file)(server, config);
 	});
 
 // Require Routes
 requirer
-	.getDirectoryFiles(config.rootDir + '/app/routes', function(file){
+	.getDirectoryFiles(__dirname + '/app/routes', function(file){
 		require(file)(server, config);
 	});
 
 // Start the server
-server.start();
-
-console.log(config.app.name + ': Listening on ' + config.port);
+server.start(function(){
+	console.log(config.app.name + ' running at:', server.info.uri);
+});

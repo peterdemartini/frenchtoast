@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(server, config) {
   server.route({
     method: 'GET',

@@ -1,3 +1,5 @@
+'use strict';
+
 var _  = require('lodash'),
 		fs = require('fs');
 
@@ -7,13 +9,12 @@ var config = {
 		name : 'FrenchToast',
 		description : 'Do Awesome Things'
 	},
-	rootDir : __dirname + '/..',
 	sessionHash : 'ILIKECH33S3BURGERS'
 };
 
 // Get Environment Config
 var env = {},
-		envFile = __dirname + '/' + process.env.NODE_ENV,
+		envFile = __dirname + '/env/' + process.env.NODE_ENV,
 		envFileExits = fs.existsSync(envFile);
 
 if(envFileExits){
