@@ -29,4 +29,4 @@ This is mainly a personal project for personal projects, to understand the best 
 1. `git clone ...`
 2. `cd frenchtoast`
 3. `npm install`
-4. `gulp`
+4. `gulp` or `npm start`
