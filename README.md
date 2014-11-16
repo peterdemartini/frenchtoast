@@ -7,7 +7,7 @@ FrenchToast.js
 
 A semi-lightweight boilerplate built on Node.js using Hapi.js, Mongo.js, and Angular.js.
 
-This is mainly a personal project for personal projects, to understand the best way build applications.
+This is mainly a personal project for personal projects; if you like it, use it and help make it better.
 
 ## Goals
 
