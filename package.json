@@ -1,7 +1,7 @@
 {
-  "name": "startled-js",
+  "name": "French Toast",
   "version": "1.0.0",
-  "description": "An Awesome starter app for Node",
+  "description": "An awesome full stack JavaScript boilerplate",
   "main": "server.js",
   "scripts": {
     "start": "gulp",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/peterdemartini/startled-js.git"
+    "url": "git://github.com/peterdemartini/frenchtoast.git"
   },
   "keywords": [
     "Starter",
@@ -19,9 +19,9 @@
   "author": "Peter DeMartini",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/peterdemartini/startled-js/issues"
+    "url": "https://github.com/peterdemartini/frenchtoast/issues"
   },
-  "homepage": "https://github.com/peterdemartini/startled-js",
+  "homepage": "https://github.com/peterdemartini/frenchtoast",
   "dependencies": {
     "hapi": "~7.5.0",
     "lodash": "~2.4.1",

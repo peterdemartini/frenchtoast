@@ -1,6 +1,10 @@
 FrenchToast.js
 ==============
 
+[![Build Status](https://travis-ci.org/peterdemartini/frenchtoast.svg?branch=master)](https://travis-ci.org/peterdemartini/frenchtoast)
+[![Dependency Status](https://david-dm.org/peterdemartini/frenchtoast.svg?theme=shields.io)](https://david-dm.org/peterdemartini/frenchtoast)
+[![devDependency Status](https://david-dm.org/peterdemartini/frenchtoast/dev-status.svg?theme=shields.io)](https://david-dm.org/peterdemartini/frenchtoast#info=devDependencies)
+
 A semi-lightweight boilerplate built on Node.js using Hapi.js, Mongo.js, and Angular.js.
 
 This is mainly a personal project for personal projects, to understand the best way build applications.

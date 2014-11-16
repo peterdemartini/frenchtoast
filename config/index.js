@@ -7,7 +7,7 @@ var _  = require('lodash'),
 var config = {
 	app : {
 		name : 'FrenchToast',
-		description : 'Do Awesome Things'
+		description : 'An awesome full stack JavaScript boilerplate'
 	},
 	sessionHash : 'ILIKECH33S3BURGERS'
 };
