@@ -10,10 +10,12 @@ server.connection
   host: config.host
   port: config.port
 
-requirer.getDirectoryFiles __dirname + '/config/hapi', (file) =>
+requirer.getDirectoryFiles __dirname + '/config/hapi', (error, file) =>
+  return console.error error if error?
   require(file)(server, config)
 
-requirer.getDirectoryFiles __dirname + '/app/routes', (file) =>
+requirer.getDirectoryFiles __dirname + '/app/routes', (error, file) =>
+  return console.error error if error?
   require(file)(server, config)
 
 server.start =>
