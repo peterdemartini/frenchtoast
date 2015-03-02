@@ -5,7 +5,10 @@ requirer = require './lib/requirer'
 Hapi     = require 'hapi'
 colors   = require 'colors/safe'
 
-server = new Hapi.Server config.host, config.port
+server = new Hapi.Server
+server.connection 
+  host: config.host
+  port: config.port
 
 requirer.getDirectoryFiles __dirname + '/config/hapi', (file) =>
   require(file)(server, config)
