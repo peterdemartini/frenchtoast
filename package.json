@@ -4,9 +4,9 @@
   "description": "An awesome full stack JavaScript boilerplate",
   "main": "server.js",
   "scripts": {
-    "postinstall": "./node_modules/gulp/bin/gulp.js production",
+    "postinstall": "node node_modules/gulp/bin/gulp.js production",
     "start": "node server.js",
-    "test": "./node_modules/gulp/bin/gulp.js test"
+    "test": "node node_modules/gulp/bin/gulp.js test"
   },
   "repository": {
     "type": "git",
