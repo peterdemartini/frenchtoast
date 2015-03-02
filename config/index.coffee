@@ -13,6 +13,7 @@ envFile = __dirname + '/env/' + process.env.NODE_ENV
 try
   env = require envFile || env
 catch
+  env = require 'development'
   console.error colors.red 'No environment config found'
 
-module.exports = _.extend config, env
+module.exports = _.extend {}, config, env
