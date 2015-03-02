@@ -10,7 +10,7 @@ module.exports = (config) =>
     exclude: []
     colors: true
     port: 9876
-    logLevel: config.LOG_INFO
+    logLevel: config.LOG_DISABLE
     reporters: 'spec'
     autoWatch: true
     browsers: ['PhantomJS']
