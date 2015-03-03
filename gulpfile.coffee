@@ -47,7 +47,7 @@ gulp.task 'nodemon', ['bower:concat', 'scripts:concat'], =>
     ]
   .on 'restart', => console.log colors.grey 'The Matrix is reloading...'
 
-gulp.task 'test-karma', ['scripts:concat'], =>
+gulp.task 'test-karma', =>
   gulp.src ['public/test/**/*']
     .pipe karma(configFile: 'karma.conf.js')
     .on 'error', (error) => console.error error
