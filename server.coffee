@@ -1,11 +1,13 @@
 'use strict';
 
+path     = require 'path'
 config   = require './config'
 requirer = require './lib/requirer'
 Hapi     = require 'hapi'
 colors   = require 'colors/safe'
 
 server = new Hapi.Server
+
 server.connection 
   host: config.host
   port: config.port
