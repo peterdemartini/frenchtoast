@@ -77,4 +77,5 @@ gulp.task 'watch', ['nodemon'], =>
 
 gulp.task 'default', ['scripts:concat']
 
-gulp.task 'production', ['test-mocha', 'test-karma', 'scripts:concat']
+gulp.task 'production', ['test', 'scripts:concat']
+
