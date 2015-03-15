@@ -11,6 +11,7 @@ server = new Hapi.Server
 server.connection 
   host: config.host
   port: config.port
+  
 requirer = new Requirer
 requirer.getDirectoryFiles __dirname + '/config/hapi', (error, file) =>
   return console.error error if error?

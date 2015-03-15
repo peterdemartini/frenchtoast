@@ -13,6 +13,7 @@ nodemon        = require 'nodemon'
 plumber        = require 'gulp-plumber'
 rename         = require 'gulp-rename'
 sourcemaps     = require 'gulp-sourcemaps'
+template       = require 'gulp-template'
 uglify         = require 'gulp-uglify'
 
 gulp.task 'bower', =>
@@ -25,9 +26,18 @@ gulp.task 'bower:concat', ['bower'], =>
     .pipe sourcemaps.init()
     .pipe concat('dependencies.js')
     .pipe sourcemaps.write('.')
-    .pipe gulp.dest('./public/dist/')
+    .pipe gulp.dest('public/dist')
 
-gulp.task 'scripts:concat', ['bower:concat'], =>
+gulp.task 'config:site', =>
+  app = require('./config').app
+  appString = JSON.stringify app, null, 2
+  gulp.src ['public/config/app.coffee']
+    .pipe template(config: appString)
+    .pipe coffee(bare: true)
+    .pipe concat('config.js')
+    .pipe gulp.dest('public/dist')
+
+gulp.task 'scripts:concat', ['bower:concat', 'config:site'], =>
   gulp.src ['public/app/**/*.coffee']
     .pipe coffee(bare: true)
     .pipe concat('app.js')
@@ -35,17 +45,6 @@ gulp.task 'scripts:concat', ['bower:concat'], =>
     .pipe rename('app.min.js')
     .pipe uglify()
     .pipe gulp.dest 'public/dist'
-
-gulp.task 'nodemon', ['bower:concat', 'scripts:concat'], =>
-  nodemon
-    script: 'server'
-    ext: 'html js coffee'
-    watch: [
-      'app/**/*'
-      'lib/*'
-      'server.*'
-    ]
-  .on 'restart', => console.log colors.grey 'The Matrix is reloading...'
 
 gulp.task 'test-karma', =>
   gulp.src ['public/test/**/*']
@@ -61,7 +60,20 @@ gulp.task 'test-mocha', =>
 
 gulp.task 'test', ['test-mocha', 'test-karma']
 
-gulp.task 'watch', ['nodemon']
+gulp.task 'nodemon', ['bower:concat', 'scripts:concat'], =>
+  nodemon
+    script: 'server'
+    ext: 'html js coffee'
+    watch: [
+      'app/**/*'
+      'lib/*'
+      'server.*'
+    ]
+  .on 'restart', => console.log colors.grey 'The Matrix is reloading...'
+
+gulp.task 'watch', ['nodemon'], =>
+  gulp.watch ['bower.json'], ['bower']
+  gulp.watch ['public/app/**/*.coffee'], ['scripts:concat']
 
 gulp.task 'default', ['scripts:concat']
 
