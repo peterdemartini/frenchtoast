@@ -5,7 +5,7 @@ FrenchToast.js
 [![Dependency Status](https://david-dm.org/peterdemartini/frenchtoast-backend.svg?theme=shields.io)](https://david-dm.org/peterdemartini/frenchtoast-backend)
 [![devDependency Status](https://david-dm.org/peterdemartini/frenchtoast-backend/dev-status.svg?theme=shields.io)](https://david-dm.org/peterdemartini/frenchtoast-backend#info=devDependencies)
 
-A semi-lightweight backend boilerplate built on Node.js using Hapi.js, and Mongo.js. All built in CoffeeScript!
+A semi-lightweight backend boilerplate built on Node.js using Hapi.js, and Mongo.js. Built in CoffeeScript!
 
 This is mainly a personal project for personal projects; if you like it, use it and help make it better.
 

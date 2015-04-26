@@ -4,7 +4,7 @@
   "description": "An awesome full stack JavaScript boilerplate",
   "main": "server.js",
   "scripts": {
-    "postinstall": "node node_modules/.bin/bower install && node node_modules/.bin/gulp production",
+    "postinstall": "node node_modules/.bin/gulp production",
     "start": "node server.js",
     "test": "node node_modules/.bin/gulp test"
   },
