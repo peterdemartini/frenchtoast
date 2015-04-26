@@ -1,8 +1,6 @@
 module.exports = (server, config) =>
   server.route
     method: 'GET'
-    path: '/{param*}'
-    handler:
-      directory:
-        path: 'public'
-        listing: false
+    path: '/healthcheck'
+    handler: (request, reply) =>
+      reply('site online')
