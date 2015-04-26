@@ -1,9 +1,9 @@
 module.exports = (server) =>
-  options = 
+  options =
     opsInterval: 1000
     reporters: [
       reporter: require 'good-console'
-      args: [
+      events: [
         log: '*'
         request: '*'
       ]
